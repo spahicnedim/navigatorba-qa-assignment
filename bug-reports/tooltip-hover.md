@@ -1,11 +1,11 @@
-# 🐞 Tooltip Flickers on Hover – "Radno vrijeme" Section
+# 🐞 Tooltip Flickers on Hover – "Radno vrijeme" (clock icon 🕒) Section
 
 ## Summary
-Tooltip with detailed working hours flickers and disappears too quickly when hovering over or between “Radno vrijeme” and “Detailed”.
+Tooltip with detailed working hours flickers and disappears too quickly when hovering over or between clock icon (🕒) and “Detailed”.
 
 ## Steps to Reproduce
 1. Navigate to any place detail page.
-2. Hover between “Radno vrijeme” and the small "Detailed" text below.
+2. Hover between clock icon (🕒) and the small "Detailed" text below.
 3. Observe the tooltip behavior.
 
 ## Expected Result
