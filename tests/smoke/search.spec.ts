@@ -8,7 +8,7 @@ test('Search for a valid address', async ({ page }) => {
     await searchInput.fill('Maršala Tita');
     await searchInput.press('Enter');
 
-    // Sačekaj da se pojave rezultati
+    // wait for results to show
     await page.waitForSelector('.menu_content_list.search-results', { timeout: 5000 });
     await expect(page.locator('.menu_content_list.search-results')).toBeVisible();
 });

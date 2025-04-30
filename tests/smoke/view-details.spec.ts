@@ -10,10 +10,9 @@ test('View place details after search', async ({ page }) => {
 
     await page.waitForSelector('.menu_content_list.search-results', { timeout: 5000 });
 
-    // Klikni prvi rezultat
+    // click on first result
     await page.locator('.menu_content_list.search-results').first().click();
 
-    // Provjeri da se prikazuje detaljna stranica
     await expect(page.locator('text=Detaljno')).toBeVisible();
     await expect(page.locator('text=Opis Objekta')).toBeVisible();
 });

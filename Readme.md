@@ -264,21 +264,6 @@ npx playwright test tests/smoke/app-load.spec.ts
 
 
 
----
-
-# 🔁 Continuous Integration (CI)
-
-This project includes a GitHub Actions workflow that automatically runs smoke tests on every push and pull request to the `main` branch.
-
-📂 Workflow file: `.github/workflows/playwright.yml`
-
-✅ What it does:
-- Installs dependencies
-- Installs Playwright browsers
-- Executes all Playwright tests
-- Uploads a visual HTML test report
-
-You can find the test report in the **Actions tab** of this GitHub repository after each CI run.
 
 
 
