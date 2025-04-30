@@ -27,13 +27,13 @@ This Test Plan outlines the strategy and scope for testing the web application [
 - UI/UX Consistency Checks
 
 ## 6. Tools & Environments
-- **Browsers**: Chrome (v123+), Arc (v124+)
-- **OS**: MacOS
+- **Browsers**: Arc V1.50.1
+- **OS**: macOS 15.4.1
 - **Automation**: Playwright with TypeScript
 - **Version Control**: Git + GitHub
 
 ## 7. Test Data
-- Valid and invalid addresses (e.g. “Sarajevo”, “!@#$%”)
+- Valid and invalid addresses (e.g. “Maršala Tita”, “!@#$%”)
 - Partially completed form data
 - Typical place data (name, phone, location)
 
@@ -168,15 +168,16 @@ This Test Plan outlines the strategy and scope for testing the web application [
 
 ## Test Case 8: Hover on Working Hours Tooltip
 
-- **Title:** Verify Tooltip on Working Hours Section
-- **Objective:** Check if tooltip for "Radno vrijeme" stays open on hover.
+- **Title:** Verify Tooltip on Working Hours Icon
+- **Objective:** Check if the tooltip showing detailed working hours stays open while hovering.
 - **Preconditions:** Place details page is open.
 - **Test Steps:**
-    1. Hover over "Radno vrijeme" or between labels.
-- **Expected Result:** Tooltip should stay visible until cursor leaves the hover area.
-- **Actual Result:** Tooltip stays open only for a second. It should stay open until the cursor leaves the hover area.
+  1. Hover over the clock icon (🕒), which represents working hours.
+  2. Move the cursor slightly around the icon and the “Detaljno” text.
+- **Expected Result:** Tooltip with detailed working hours should remain visible as long as the user is hovering over the icon or the tooltip area.
+- **Actual Result:** Tooltip briefly appears and disappears within a second, making it nearly impossible to interact with or read.
 - **Status:** Fail
-- **Type:** Negative
+- **Type:** Negative (UX usability issue)
 
 ---
 
@@ -196,13 +197,13 @@ This Test Plan outlines the strategy and scope for testing the web application [
 
 ---
 
-## Test Case 10: Report a Problem via "Report Issue" Form
+## Test Case 10: Report a Problem via "Report a Problem" Form
 
 - **Title:** Reporting an Issue
-- **Objective:** Ensure that the Report Issue form submits successfully.
+- **Objective:** Ensure that the Report a Problem form submits successfully.
 - **Preconditions:** User is logged in or anonymous.
 - **Test Steps:**
-    1. Fill out the Report Issue form with details.
+    1. Fill out the Report a Problem form with details.
     2. Submit the form.
 - **Expected Result:** Success message confirming the report submission.
 - **Actual Result:** Unable to send your feedback. Some unexpected error occurred. Please try again. That error appears and i couldn't send a report.
@@ -230,6 +231,9 @@ The following Test Cases are selected as Smoke Tests:
 - Test Case 2: Valid Address Search
 - Test Case 4: View Place Details
 - Test Case 9: Rating a Place
+> 🔸 Note: Test Case 5 (Create Place) was excluded from the Smoke Test Set
+> even though it is a critical functionality. It currently fails due to an application-side error
+> (see bug report), and therefore cannot be included in the passing smoke suite.
 
 
 # 🚀 How to Run the Tests (Playwright + TypeScript)
