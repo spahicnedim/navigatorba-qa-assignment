@@ -1,0 +1,23 @@
+{
+  "name": "navigatior.ba---test",
+  "version": "1.0.0",
+  "description": "## 1. Introduction This Test Plan outlines the strategy and scope for testing the web application [https://www.navigator.ba](https://www.navigator.ba). The goal is to ensure functional correctness, visual clarity, and reliability across devices and use cases.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.52.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
